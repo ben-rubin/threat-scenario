@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-threatscenario-dev-102317-authRole",
+      "UnauthRoleArn": "arn:aws:iam::098662600264:role/amplify-threatscenario-dev-102317-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::098662600264:role/amplify-threatscenario-dev-102317-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-threatscenario-dev-102317-deployment",
+      "UnauthRoleName": "amplify-threatscenario-dev-102317-unauthRole",
+      "StackName": "amplify-threatscenario-dev-102317",
+      "StackId": "arn:aws:cloudformation:ap-south-1:098662600264:stack/amplify-threatscenario-dev-102317/c38d4cb0-b829-11ec-999e-06113eeb495e",
+      "AmplifyAppId": "dtf5p6suqfnzf"
+    },
+    "categories": {
+      "auth": {
+        "threatscenariocde656ec": {}
+      }
+    }
+  }
+}
