@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { Popconfirm, Table } from 'antd'
-import { ThreatScenario } from '../Interfaces/Interfaces'
+import { ThreatScenario } from '../interfaces/Interfaces'
 
 interface ThreatScenarioTableProps {
     handleDelete

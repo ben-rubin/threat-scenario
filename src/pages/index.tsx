@@ -6,7 +6,8 @@ import Error from 'next/error'
 // import useSwr from 'swr'
 import ThreatScenarioTable from '../components/threat-scenario-table'
 import { index, remove } from '../services/threat-scenario-service'
-import { ThreatScenario } from '../Interfaces/Interfaces'
+import { ThreatScenario } from '../interfaces/Interfaces'
+import BaseLayout from '../components/layout'
 
 const Index = (): JSX.Element => {
     // const { data, error } = useSwr(url, fetcher, { })
@@ -34,15 +35,11 @@ const Index = (): JSX.Element => {
     }
 
     return (
-        <>
+        <BaseLayout title='Index' pageKey='index'>
             <Spin spinning={loading}>
                 <ThreatScenarioTable handleDelete={handleDelete} data={data} />
-                <Link href={'/threat-scenario/'} as={'/threat-scenario'}>
-                    <Button type='default'>Create new threat scenario</Button>
-                </Link>
-                <AmplifySignOut />
             </Spin>
-        </>
+        </BaseLayout>
     )
 }
 

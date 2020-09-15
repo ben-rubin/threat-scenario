@@ -5,11 +5,12 @@ import Error from 'next/error'
 // import * as _get from 'lodash/get'
 
 //@todo namespace these so we don't need to do directory traversal
-// ... by adding to .babelrc
+// ... by adding to babel
 import ThreatScenarioForm from '../../components/threat-scenario-form'
-import { ThreatScenario as IThreatScenario } from '../../Interfaces/Interfaces'
+import { ThreatScenario as IThreatScenario } from '../../interfaces/Interfaces'
 import { get, update } from '../../services/threat-scenario-service'
 import { withAuthenticator } from '@aws-amplify/ui-react'
+import BaseLayout from '../../components/layout'
 
 const ThreatScenarioIndex = () => {
     const { query: { id } } = useRouter()
@@ -44,9 +45,11 @@ const ThreatScenarioIndex = () => {
     // const { data, error } = useSwr(`/api/threat-scenario/${id}`, fetcher)
 
     return (
-        <Spin spinning={loading}>
-            <ThreatScenarioForm threatScenario={data} handleSubmit={handleSubmit} buttonText='Update' />
-        </Spin>
+        <BaseLayout title='Edit' pageKey={'edit'}>
+            <Spin spinning={loading}>
+                <ThreatScenarioForm threatScenario={data} handleSubmit={handleSubmit} buttonText='Update' />
+            </Spin>
+        </BaseLayout>
     )
 }
 

@@ -5,9 +5,10 @@ import Error from 'next/error'
 import get from 'lodash/get'
 
 import ThreatScenarioForm from '../../components/threat-scenario-form'
-import { ThreatScenario as IThreatScenario } from '../../Interfaces/Interfaces'
+import { ThreatScenario as IThreatScenario } from '../../interfaces/Interfaces'
 import { create } from '../../services/threat-scenario-service'
 import { withAuthenticator } from '@aws-amplify/ui-react'
+import BaseLayout from '../../components/layout'
 
 const ThreatScenario = () => {
     const { query: { id } } = useRouter()
@@ -28,9 +29,11 @@ const ThreatScenario = () => {
     // const { data, error } = useSwr(`/api/threat-scenario/${id}`, fetcher)
 
     return (
-        <Spin spinning={loading}>
-            <ThreatScenarioForm handleSubmit={handleSubmit} />
-        </Spin>
+        <BaseLayout title={'Create new'} pageKey={'add'}>
+            <Spin spinning={loading}>
+                <ThreatScenarioForm handleSubmit={handleSubmit} />
+            </Spin>
+        </BaseLayout>
     )
 }
 

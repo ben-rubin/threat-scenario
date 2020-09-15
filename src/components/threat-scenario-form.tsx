@@ -1,6 +1,6 @@
 import { Button, Form, Input, Select } from 'antd'
 import React from 'react'
-import { ThreatScenario } from '../Interfaces/Interfaces'
+import { ThreatScenario } from '../interfaces/Interfaces'
 
 interface ThreatScenarioFormProps {
     threatScenario?: ThreatScenario

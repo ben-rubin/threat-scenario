@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
     "@aws-amplify/ui-react": "^0.2.18",
     "@reduxjs/toolkit": "^1.4.0",
     "antd": "^4.6.3",

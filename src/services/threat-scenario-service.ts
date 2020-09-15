@@ -1,4 +1,4 @@
-import { ThreatScenario } from '../Interfaces/Interfaces'
+import { ThreatScenario } from '../interfaces/Interfaces'
 import axios from 'axios'
 
 export const threatScenarioApiUrl = 'http://localhost:3001/threat-scenario'
