@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "threatscenarioa607865f": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
