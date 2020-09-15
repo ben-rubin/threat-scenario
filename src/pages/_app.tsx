@@ -1,4 +1,3 @@
-import React from 'react'
 import App from 'next/app'
 import '../styles/antd.less'
 import { Provider } from 'react-redux'
@@ -6,8 +5,8 @@ import { Amplify, Auth } from 'aws-amplify'
 import awsconfig from '../aws-exports'
 import { threatScenarioApiUrl } from '../services/threat-scenario-service'
 import setBearerToken from '../util/set-bearer-token'
-import { initStore } from '../store'
-const store = initStore()
+
+import store from '../store'
 
 Amplify.configure(awsconfig)
 

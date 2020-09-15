@@ -25,8 +25,6 @@ Going with SWR (new to me but looks good)
 > Makes things a little easier. There's a good argument for Axios instead of fetch here https://blog.logrocket.com/axios-or-fetch-api/   
 > Timeouts, interceptors, automatic JSON parsing, progress bar are all easier  
 >
-
-> @TODO Build service for PUT/POST/DELETE/GET  
 >
 - antd 
 > Its adoption is massive, and I'm familiar with it
@@ -71,7 +69,6 @@ https://developers.google.com/identity/protocols/oauth2/web-server#creatingcred
 
 ####Database
 - PostgreSQL (do we need table inheritance?) or MySQL  
-> @TODO design schema
 >
 
 ####Dev Environment

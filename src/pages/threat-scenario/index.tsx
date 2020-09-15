@@ -7,8 +7,9 @@ import get from 'lodash/get'
 import ThreatScenarioForm from '../../components/threat-scenario-form'
 import { ThreatScenario as IThreatScenario } from '../../Interfaces/Interfaces'
 import { create } from '../../services/threat-scenario-service'
+import { withAuthenticator } from '@aws-amplify/ui-react'
 
-export default function ThreatScenario() {
+const ThreatScenario = () => {
     const { query: { id } } = useRouter()
     const [error, setError] = useState<number>(0)
     const [loading, setLoading] = useState<boolean>(false)
@@ -32,3 +33,5 @@ export default function ThreatScenario() {
         </Spin>
     )
 }
+
+export default withAuthenticator(ThreatScenario)

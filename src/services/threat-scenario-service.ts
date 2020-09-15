@@ -17,10 +17,13 @@ const update = (id, values: ThreatScenario) =>
 const create = async (values: ThreatScenario) =>
     axios.post('/', values).then(res => res.data)
 
+const remove = async (id) =>
+    axios.delete(`/${id}`).then(res => res.data)
 
 export {
     get,
     index,
     update,
-    create
+    create,
+    remove,
 }

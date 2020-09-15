@@ -2,14 +2,16 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { Spin } from 'antd'
 import Error from 'next/error'
-import get from 'lodash/get'
+// import * as _get from 'lodash/get'
 
 //@todo namespace these so we don't need to do directory traversal
+// ... by adding to .babelrc
 import ThreatScenarioForm from '../../components/threat-scenario-form'
 import { ThreatScenario as IThreatScenario } from '../../Interfaces/Interfaces'
 import { get, update } from '../../services/threat-scenario-service'
+import { withAuthenticator } from '@aws-amplify/ui-react'
 
-export default function ThreatScenario() {
+const ThreatScenarioIndex = () => {
     const { query: { id } } = useRouter()
     const [data, setData] = useState(null)
     const [error, setError] = useState<number>(0)
@@ -22,7 +24,7 @@ export default function ThreatScenario() {
                     setData(data)
                     setLoading(false)
                 })
-                .catch(e => setError(get(e, 'response.status', 500)))
+                // .catch(e => setError(_get(e, 'response.status', 500)))
                 .finally(() => setLoading(false))
         }
     }, [id])
@@ -47,3 +49,5 @@ export default function ThreatScenario() {
         </Spin>
     )
 }
+
+export default withAuthenticator(ThreatScenarioIndex)
